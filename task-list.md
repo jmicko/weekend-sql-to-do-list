@@ -1,5 +1,5 @@
 # Appearance
-- [ ] main div
+- [x] main div
     - 
         - [ ] css flexbox
         - [ ] centered
