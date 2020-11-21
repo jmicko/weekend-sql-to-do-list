@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,46 @@
     <script src="./vendors/jquery.min.js"></script>
     <script src="./scripts/client.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>TO-DO LIST</h1>
-        </header>
-        <main>
-            <section id="new-to-do">
+    <div class="border">
+        <div class="container">
+            <header>
+                <h1>TO-DO LIST</h1>
+            </header>
+            <main>
+                <div class="new-to-do">
+                    <div class="new-to-do-text">
+                        <input id="new-to-do-in" type="text">
+                    </div>
+                    <div class="new-to-do-buttons">
+                        <button>Add</button>
+                    </div>
+                </div>
+                <div id="to-do-list">
+                    <div class="to-do">
+                        <div class="to-do-text">
+                            <p class="to-do-p">go to the store</p>
+                        </div>
+                        <div class="to-do-buttons">
+                            <button>complete</button>
+                            <button>delete</button>
+                        </div>
+                    </div>
+                    <div class="to-do">
+                        <div class="to-do-text">
+                            <p class="to-do-p">go to the store and get a lot of bread and sand for the sandbox and the sandwiches which is what the kids like eating these days</p>
+                        </div>
+                        <div class="to-do-buttons">
+                            <button>complete</button>
+                            <button>delete</button>
+                        </div>
+                    </div>
 
-            </section>
-            <section id="to-do-list">
-
-            </section>
-        </main>
+                </div>
+            </main>
+        </div>
     </div>
 </body>
+
 </html>

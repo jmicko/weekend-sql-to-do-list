@@ -1,7 +1,7 @@
 # Appearance
-- [x] main div
+- [x] main container div
     - 
-        - [ ] css flexbox
+        - [ ] css grid
         - [ ] centered
         - [ ] shadow
         - [ ] text-align center

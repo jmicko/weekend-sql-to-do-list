@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jmicko/weekend-sql-to-do-list#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "express": "^4.17.1",
     "jquery": "^3.5.1"
   }
