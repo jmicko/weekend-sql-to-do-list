@@ -19,20 +19,26 @@ main{
     background-color: #9DCAC7;
 }
 
-.to-do, .new-to-do{
-    display: grid;
+.to-do{
     margin: .5rem;
     padding: .5rem;
+    display: grid;
     border-radius: .4rem;
 }
 
 .new-to-do{
-    background-color: #28655E;
+    display: grid;
     grid-template-columns: auto max-content;
-    column-gap: 1rem;
+    /* column-gap: 1rem; */
 }
 
 .new-to-do-text{
+    border-radius: .4rem 0 0 .4rem;
+    margin: .5rem;
+    margin-right: 0;
+    padding: .5rem;
+    padding-right: 1rem;
+    background-color: #28655E;
     grid-column-start: 1;
 }
 
@@ -43,7 +49,23 @@ main{
 }
 
 .new-to-do-buttons{
+    border: none;
+    border-radius: 0 .4rem .4rem 0;
+    background-color: #28655E;
+    margin: .5rem;
+    margin-left: 0;
+    padding: .5rem;
+    padding-left: .5rem;
     grid-column-start: 2;
+}
+
+.new-to-do-buttons:hover{
+    background-color: rgb(131, 165, 125);
+}
+
+.new-to-do-buttons:focus,
+.new-to-do-buttons:active{
+    background-color: violet;
 }
 
 .to-do{
@@ -76,4 +98,13 @@ header{
 .h1{
     justify-self: center;
     text-align: center;
+}
+
+.add{
+    font-size: larger;
+    padding: 0;
+}
+
+.add:hover{
+    fill: white;
 }

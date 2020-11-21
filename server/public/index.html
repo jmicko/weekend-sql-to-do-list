@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./vendors/fontawesome-free/css/all.min.css">
     <script src="./vendors/jquery.min.js"></script>
     <script src="./scripts/client.js"></script>
 </head>
@@ -21,9 +22,11 @@
                     <div class="new-to-do-text">
                         <input id="new-to-do-in" type="text">
                     </div>
-                    <div class="new-to-do-buttons">
-                        <button>Add</button>
-                    </div>
+                    <!-- <a href="/"> -->
+                        <button class="new-to-do-buttons" tabindex="0">
+                            <i class="add far fa-plus-square"></i>
+                        </button>
+                    <!-- </a> -->
                 </div>
                 <div id="to-do-list">
                     <div class="to-do">
