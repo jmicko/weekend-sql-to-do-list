@@ -1,6 +1,7 @@
 body {
     background-color: #B63F37;
     margin: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -93,6 +94,10 @@ main {
 
 .complete{
     background-color: rgb(139, 139, 139);
+}
+
+.complete .to-do-p{
+    text-decoration: line-through;
 }
 
 header {
