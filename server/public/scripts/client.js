@@ -11,7 +11,7 @@ function onLoad() {
 function addClickHandlers() {
     $('.new-to-do-buttons').on('click', addTodo),
         $('.btn-complete').on('click', completeTask),
-        $('.btn-delete').on('click', deleteTask)
+        $("#to-do-list").on('click', '.btn-delete', deleteTask)
 }
 
 function addTodo(event) {
@@ -19,6 +19,23 @@ function addTodo(event) {
     // remover focus from button after click
     $('#new-to-do-in').focus();
     console.log('clicked add to-do button');
+
+    console.log('Submit button clicked.');
+    let todo = {};
+    todo.task = $('#new-to-do-in').val();
+
+    $.ajax({
+        type: 'POST',
+        url: '/todos',
+        data: todo,
+        }).then(function(response) {
+          console.log('Response from server.', response);
+          $('#new-to-do-in').val('');
+          refreshList();
+        }).catch(function(error) {
+          console.log('Error in POST', error)
+          alert('Unable to add todo at this time. Please try again later.');
+        });
 }
 
 function completeTask() {
@@ -29,6 +46,8 @@ function completeTask() {
 
 function deleteTask() {
     console.log('in deleteTask function');
+    // delete button has been pressed
+    // refresh todo list
     refreshList()
 }
 
@@ -52,14 +71,14 @@ function renderList(list) {
     console.log('in the renderList function', list);
     // clear list on DOM
     $('#incomplete-todos').empty();
+    $('#complete-todos').empty();
     // for of
     for (const todo of list) {
-        console.log(todo.status);
         // if complete
         if (todo.status == 'incomplete') {
             // Render incompletes
             let toDoElement = 
-            `<div class="to-do incomplete" data-todo=${todo}>
+            `<div class="to-do incomplete" data-todo="${todo}">
             <div class="to-do-text">
             <p class="to-do-p">${todo.task}</p>
             </div>
@@ -74,7 +93,7 @@ function renderList(list) {
         else {
             // render completes
             let toDoElement = 
-            `<div class="to-do complete" data-todo=${todo}>
+            `<div class="to-do complete" data-todo="${todo}">
                 <div class="to-do-text">
                     <p class="to-do-p">${todo.task}</p>
                 </div>

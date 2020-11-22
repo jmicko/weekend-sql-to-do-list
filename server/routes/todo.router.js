@@ -16,6 +16,22 @@ router.get('/', (req, res) => {
     });
 });
 
+router.post('/',  (req, res) => {
+    let newTodo = req.body;
+    console.log(`Adding todo`, newTodo);
+  
+    let queryText = `INSERT INTO "todos" ("task")
+                     VALUES ($1);`;
+    pool.query(queryText, [newTodo.task])
+      .then(result => {
+        res.sendStatus(201);
+      })
+      .catch(error => {
+        console.log(`Error adding new todo`, error);
+        res.sendStatus(500);
+      });
+  });
+
 
 
 

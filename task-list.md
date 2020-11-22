@@ -39,7 +39,7 @@
 >   - [x] refreshList
 
 ## [x] addTodo
->   - [] post route
+>   - [x] post route
 >   - [x] refrreshList()
 
 ## [x] completeTask
@@ -56,28 +56,27 @@
 >       - [] package text, status, and id together and send through put route
             
 ## [x] refreshList
->   - [] get route 
->       - [] render complete todos
->       - [] render incomplete todos
+>   - [x] get route 
+>       - [x] render complete todos
+>       - [x] render incomplete todos
 
 
 # Server side
 ## [] Routes
->   - [] set up router to export routes
->       - [] get
->           - [] get all incomplete todos, sorted by date created
->           - [] get all incomplete todos, sorted by date completed
->       - [] post
->           - [] grab todo text from input
->           - [] send todo to server
->           - [] 
+>   - [x] set up router to export routes
+>       - [x] get
+>           - [x] get all incomplete todos, sorted by date created
+>           - [x] get all incomplete todos, sorted by date completed
+>       - [x] post
+>           - [x] grab todo text from input
+>           - [x] send todo to server
 >       - [] delete
 >           - [] delete todo by id
 >       - [] put
 >           - [] change status, change text of todo if I have time
 
 ## Pool 
->   - [] set up pool to connect to db
+>   - [x] set up pool to connect to db
 
 ## Database
 >   - [x] todos table
