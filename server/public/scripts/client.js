@@ -11,7 +11,7 @@ function onLoad() {
 function addClickHandlers() {
     $('.new-to-do-buttons').on('click', addTodo),
         $("#to-do-list").on('click', '.btn-complete', completeTask)
-        $("#to-do-list").on('click', '.btn-delete', deleteTask)
+    $("#to-do-list").on('click', '.btn-delete', deleteTask)
 }
 
 function addTodo(event) {
@@ -55,22 +55,23 @@ function completeTask() {
     let todo = $(this).closest('div.to-do').data('todo');
     let row = $(this).closest('div.to-do');
     console.log('-----------logging todo id', todo.id);
-    console.log('-----------logging row', row);
+    console.log('-----------logging todo status', todo.status);
 
-    // $.ajax({
-    //     method: 'PUT',
-    //     // go to the the put route with the book id
-    //     url: `/books/${book.id}`,
-    //     // send the current read/unread status along with
-    //     data: { status: book.status }
-    // }).then(function (response) {
-    //     // update the dom after success
-    //     refreshBooks();
-    //     // catch errors
-    // }).catch((error) => {
-    //     console.log('error from db', error);
-    //     res.sendStatus(500);
-    // })
+    $.ajax({
+        method: 'PUT',
+        // go to the the put route with the todo id
+        url: `/todos/${todo.id}`,
+        // send the current complete/incomplete status along with
+        // makes for one less db query on the server side since we already know the satus from earlier. This is more efficient
+        data: { status: todo.status }
+    }).then(function (response) {
+        // update the dom after success
+        refreshList();
+        // catch errors
+    }).catch((error) => {
+        console.log('error from db', error);
+        res.sendStatus(500);
+    })
     refreshList()
 }
 
