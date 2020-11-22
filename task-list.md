@@ -30,56 +30,65 @@
                     - [ ] slight margin to seperate form others
                     - [ ] confirm delete
 
-# Functions
-- [] onLoad
-    - 
-        - [] add handlers
-            - [] click add-to-do button
+# Client side Functions
+
+## [] onLoad
+        - [x] add handlers
+            - [x] click add-to-do button
             - [] click complete button
             - [] click delete button
             - [] click update button (if I get to it)
         - [] refreshList
-- [] addTodo
-    - 
+
+## [] addTodo
         - [] post route
-        - [] refrreshList()
-- [] completeTask
+        - [x] refrreshList()
+
+## [x] completeTask
     - [] send status and id to put route
     - [] refreshList
-- [] deleteTask
+
+## [x] deleteTask
     - [] send id to delete route
-- [] updateTask (?)
+
+## [] updateTask (?)
     - 
         - [] put route
             - [] open new input field with new submit button
             - [] grab text from new input field on new button click
             - [] package text, status, and id together and send through put route
-- [] refreshList
+            
+## [x] refreshList
     - 
         - [] get route 
             - [] render complete todos
             - [] render incomplete todos
 
 
-# Routes
-- [] get
-    - [] get all incomplete todos, sorted by date created
-    - [] get all incomplete todos, sorted by date completed
-- [] post
-    - [] grab todo text from input
-    - [] send todo to server
-    - [] 
-- [] delete
-    - [] delete todo by id
-- [] put
-    - [] change status, change text of todo if I have time
+# Server side
+## [] Routes
+    - [] set up router to export routes
+        - [] get
+            - [] get all incomplete todos, sorted by date created
+            - [] get all incomplete todos, sorted by date completed
+        - [] post
+            - [] grab todo text from input
+            - [] send todo to server
+            - [] 
+        - [] delete
+            - [] delete todo by id
+        - [] put
+            - [] change status, change text of todo if I have time
 
-# Database
-- [x] todos table
-    - [x] id
-    - [x] task
-    - [x] status
-    - [x] created
-        - [x] auto timestamp
-    - [x] completed 
-        - [] auto timestamp
+## Pool 
+    - [] set up pool to connect to db
+
+## Database
+    - [x] todos table
+        - [x] id
+        - [x] task
+        - [x] status
+        - [x] created
+            - [x] auto timestamp
+        - [x] completed 
+            - [] auto timestamp
