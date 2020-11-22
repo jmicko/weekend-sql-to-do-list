@@ -49,10 +49,41 @@ function refreshList() {
 }
 
 function renderList(list) {
-    // for of
-    // if complete
-        // Render completes
-    // else
-        // render incompletes
     console.log('in the renderList function', list);
+    // clear list on DOM
+    $('#incomplete-todos').empty();
+    // for of
+    for (const todo of list) {
+        console.log(todo.status);
+        // if complete
+        if (todo.status == 'incomplete') {
+            // Render incompletes
+            let toDoElement = 
+            `<div class="to-do incomplete" data-todo=${todo}>
+            <div class="to-do-text">
+            <p class="to-do-p">${todo.task}</p>
+            </div>
+            <div class="to-do-buttons">
+            <button class="btn-complete">complete</button>
+            <button class="btn-delete">delete</button>
+            </div>
+            </div>`;
+            $('#incomplete-todos').append(toDoElement);
+        }
+        // else
+        else {
+            // render completes
+            let toDoElement = 
+            `<div class="to-do complete" data-todo=${todo}>
+                <div class="to-do-text">
+                    <p class="to-do-p">${todo.task}</p>
+                </div>
+                <div class="to-do-buttons">
+                    <button class="btn-complete">complete</button>
+                    <button class="btn-delete">delete</button>
+                </div>
+            </div>`;
+            $('#complete-todos').append(toDoElement);
+        }
+    }
 }

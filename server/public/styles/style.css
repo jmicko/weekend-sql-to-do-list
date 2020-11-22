@@ -91,6 +91,10 @@ main {
     margin: 1rem;
 }
 
+.complete{
+    background-color: rgb(139, 139, 139);
+}
+
 header {
     max-height: min-content;
     display: block;

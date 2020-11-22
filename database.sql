@@ -12,6 +12,7 @@ INSERT INTO "todos" ("task", "status") VALUES ('Tell Yer to obey her man and mak
 
 SELECT * FROM "todos";
 SELECT * FROM "todos" WHERE status='incomplete' ORDER BY status;
+SELECT * FROM "todos" ORDER BY created_at DESC;
 SELECT * FROM "todos" WHERE status='incomplete' ORDER BY created_at DESC;
 SELECT * FROM "todos" ORDER BY status;
 SELECT * FROM "todos" WHERE status='incomplete' ORDER BY completed_at DESC;
