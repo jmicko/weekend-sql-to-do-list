@@ -2,7 +2,7 @@ const pg = require('pg');
 
 // Set up our pool
 const config = {
-  database: 'to_do_list', 
+  database: 'weekend-to-do-app', 
   host: 'localhost', 
   port: 5432, 
   max: 10, 
