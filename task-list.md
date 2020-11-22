@@ -9,23 +9,23 @@
 >       - [x] text-align left
 >       - [x] input field for new to-do
 >       - [x] submit to-do button
->           - [ ] trigger post route to send a todo
->           - [ ] trigger get route to refresh todos
+>           - [x] trigger post route to send a todo
+>           - [x] trigger get route to refresh todos
 >   - [x] todo list
->       - [ ] text-align left
->       - [ ] get route to get all todos from server on page load
->       - [ ] list all todos
+>       - [x] text-align left
+>       - [x] get route to get all todos from server on page load
+>       - [x] list all todos
 >       - ### Each todo should have
->           - [ ] css grid maybe?
->           - [ ] complete button
->               - [ ] trigger post route to add to db
->           - [ ] delete button 
->               - [ ] trigger delete route to delete from db
->           - [ ] actual task, p tag is okay
->           - [ ] data portion to store todo ID
->           - [ ] styling
->               - [ ] color to reflect completion or still need to do
->               - [ ] slight margin to seperate form others
+>           - [x] css grid maybe?
+>           - [x] complete button
+>               - [x] trigger post route to add to db
+>           - [x] delete button 
+>               - [x] trigger delete route to delete from db
+>           - [x] actual task, p tag is okay
+>           - [x] data portion to store todo ID
+>           - [x] styling
+>               - [x] color to reflect completion or still need to do
+>               - [x] slight margin to seperate form others
 >               - [ ] confirm delete
 
 # Client side Functions
@@ -43,11 +43,11 @@
 >   - [x] refrreshList()
 
 ## [x] completeTask
->   - [] send status and id to put route
->   - [] refreshList
+>   - [x] send status and id to put route
+>   - [x] refreshList
 
 ## [x] deleteTask
->   - [] send id to delete route
+>   - [x] send id to delete route
 
 ## [] updateTask (?)
 >   - [] put route
@@ -70,10 +70,11 @@
 >       - [x] post
 >           - [x] grab todo text from input
 >           - [x] send todo to server
->       - [] delete
->           - [] delete todo by id
->       - [] put
->           - [] change status, change text of todo if I have time
+>       - [x] delete
+>           - [x] delete todo by id
+>       - [x] put
+>           - [x] change status
+>           - [] change text of todo if I have time
 
 ## Pool 
 >   - [x] set up pool to connect to db
