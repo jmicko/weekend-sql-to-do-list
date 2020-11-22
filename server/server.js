@@ -1,8 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+// include todo router in order to use routes
+const todoRouter = require('./routes/todo.router');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
+
+// direct todos url calls to todo router
+app.use('/todos', todoRouter);
 
 
 // Serve back static files by default
