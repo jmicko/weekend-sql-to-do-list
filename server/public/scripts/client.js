@@ -10,7 +10,7 @@ function onLoad() {
 
 function addClickHandlers() {
     $('.new-to-do-buttons').on('click', addTodo),
-        $('.btn-complete').on('click', completeTask),
+        $("#to-do-list").on('click', '.btn-complete', completeTask)
         $("#to-do-list").on('click', '.btn-delete', deleteTask)
 }
 
@@ -22,7 +22,7 @@ function addTodo(event) {
 
     // capture the value of the input field
     // this object could later be used to send other data like a priority flag, or color category tag etc
-    let todo = {task : $('#new-to-do-in').val()};
+    let todo = { task: $('#new-to-do-in').val() };
     // check if there was anything in the input. If there was, send it. If not, ignore button press
     // cursor will have been refocused on input so we can leave it at that
     if (todo.task.length !== 0) {
@@ -51,6 +51,26 @@ function addTodo(event) {
 function completeTask() {
     console.log('in completeTask');
     // send status and id to server via PUT route
+    // save the book data from the row
+    let todo = $(this).closest('div.to-do').data('todo');
+    let row = $(this).closest('div.to-do');
+    console.log('-----------logging todo id', todo.id);
+    console.log('-----------logging row', row);
+
+    // $.ajax({
+    //     method: 'PUT',
+    //     // go to the the put route with the book id
+    //     url: `/books/${book.id}`,
+    //     // send the current read/unread status along with
+    //     data: { status: book.status }
+    // }).then(function (response) {
+    //     // update the dom after success
+    //     refreshBooks();
+    //     // catch errors
+    // }).catch((error) => {
+    //     console.log('error from db', error);
+    //     res.sendStatus(500);
+    // })
     refreshList()
 }
 
@@ -64,16 +84,16 @@ function deleteTask() {
     $.ajax({
         type: 'DELETE',
         url: `/todos/${todo.id}`
-      }).then(function (response) {
+    }).then(function (response) {
         // get rid of the row once we get success message from server
         $(row).empty();
         // get the updated todo list from the server
         refreshList();
         // catch errors
-      }).catch(function(error) {
+    }).catch(function (error) {
         console.log('Error in POST', error)
         alert('Unable to delete todo at this time. Please try again later.');
-      });
+    });
 }
 
 
