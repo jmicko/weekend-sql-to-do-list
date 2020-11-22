@@ -10,8 +10,8 @@ function onLoad() {
 
 function addClickHandlers() {
     $('.new-to-do-buttons').on('click', addTodo),
-    $('.btn-complete').on('click', completeTask),
-    $('.btn-delete').on('click', deleteTask)
+        $('.btn-complete').on('click', completeTask),
+        $('.btn-delete').on('click', deleteTask)
 }
 
 function addTodo(event) {
@@ -36,10 +36,23 @@ function deleteTask() {
 function refreshList() {
     console.log('in refreshList');
     // GET route to retrieve all todos from db
+    $.ajax({
+        type: 'GET',
+        url: '/todos'
+    }).then(function (response) {
+        console.log(response);
+        renderList(response);
+    }).catch(function (error) {
+        console.log('error in GET', error);
+    });
+
+}
+
+function renderList(list) {
     // for of
     // if complete
         // Render completes
     // else
         // render incompletes
-    
+    console.log('in the renderList function', list);
 }
