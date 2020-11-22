@@ -1,17 +1,17 @@
 # Appearance
 ## [x] main container div
 >   - CSS properties
->       - [ ] css grid
->       - [ ] centered
+>       - [x] css grid
+>       - [x] centered
 >       - [ ] shadow
->       - [ ] text-align center
->   - [ ] new todo area 
->       - [ ] text-align left
->       - [ ] input field for new to-do
->       - [ ] submit to-do button
+>       - [x] text-align center
+>   - [x] new todo area 
+>       - [x] text-align left
+>       - [x] input field for new to-do
+>       - [x] submit to-do button
 >           - [ ] trigger post route to send a todo
 >           - [ ] trigger get route to refresh todos
->   - [ ] todo list
+>   - [x] todo list
 >       - [ ] text-align left
 >       - [ ] get route to get all todos from server on page load
 >       - [ ] list all todos
@@ -30,15 +30,15 @@
 
 # Client side Functions
 
-## [] onLoad
+## [x] onLoad
 >   - [x] add handlers
 >       - [x] click add-to-do button
->       - [] click complete button
->       - [] click delete button
->       - [] click update button (if I get to it)
->   - [] refreshList
+>       - [x] click complete button
+>       - [x] click delete button
+>       - [ ] click update button (if I get to it)
+>   - [x] refreshList
 
-## [] addTodo
+## [x] addTodo
 >   - [] post route
 >   - [x] refrreshList()
 
