@@ -33,7 +33,6 @@ Link to software that is required to install the app (e.g. node).
 4. Run `npm start` in your terminal
 6. Navigate to [http://localhost:5000/](http://localhost:5000/). App will show up in browser
 
-
 ## Usage
 How does someone use this application? Tell a user story here.
 
