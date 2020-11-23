@@ -1,20 +1,20 @@
 ![REPO SIZE](https://img.shields.io/github/repo-size/jmicko/weekend-sql-to-do-list.svg?style=flat-square)
 ![TOP_LANGUAGE](https://img.shields.io/github/languages/top/jmicko/weekend-sql-to-do-list.svg?style=flat-square)
 
-# PROJECT NAME
-Weekend SQL To-do List
+# Weekend SQL To-do List
 
 ## Description
 
 _Duration: Weekend Project_
 
+Build a to-do app. Should be able to add todos to a list. Each to-do should have buttons for completing and deleting the to-do.
+
 ## Screen Shot
 
-
+![Desktop Site](./server/public/img/desktop-site.png)
+![Mobile Site](./server/public/img/mobile-site.png)
 
 ### Prerequisites
-
-Link to software that is required to install the app (e.g. node).
 
 - [Node.js](https://nodejs.org/en/)
 - [Postgresql](https://www.postgresql.org/)
@@ -30,10 +30,8 @@ Link to software that is required to install the app (e.g. node).
 6. Navigate to [http://localhost:5000/](http://localhost:5000/). App will show up in browser
 
 ## Usage
-How does someone use this application? Tell a user story here.
-
 1. Enter a task in the input field and click the +. This will add the todo to the list.
-2. Clicking the complete and delete buttons will toggle the completion status or delete the todo
+2. Clicking the checkbox and trash buttons will toggle the completion status or delete the todo
 
 ## Built With
 
@@ -41,10 +39,9 @@ Node JS
 Express
 Postgresql
 jQuery
-Pg
 
 ## Acknowledgement
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. (Thank your people)
+Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality.
 
 ## Support
-If you have suggestions or issues, please email me at [jrmicko5012@gmail.com](www.google.com)
+If you have suggestions or issues, please email me at [jrmicko5012@gmail.com](jrmicko5012@gmail.com)

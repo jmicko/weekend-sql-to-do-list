@@ -124,6 +124,13 @@ function renderList(list) {
     for (const todo of list) {
         // creat a div element with the status as a class for easier styling
         let $div = $(`<div class="to-do ${todo.status}"></div>`);
+        // create button text based on the status of the todo
+        let btnText = '';
+        if (todo.status === 'complete') {
+            btnText = '<i class="far fa-check-square"></i>';
+        } else {
+            btnText = '<i class="far fa-square"></i>';
+        }
         // append the todo data for retrieval later on DELETE or PUT routes
         $div.data('todo', todo);
         // append the text of the todo along with the buttons in a separate div to style with css grid
@@ -132,8 +139,8 @@ function renderList(list) {
             <p class="to-do-p">${todo.task}</p>
         </div>
         <div class="to-do-buttons">
-            <button class="btn-complete">complete</button>
-            <button class="btn-delete">delete</button>
+            <button class="btn-complete">${btnText}</button>
+            <button class="btn-delete"><i class="fas fa-trash"></i></button>
         </div>
         `);
         // append to the appropriate area based on the status. compled todos go at the bottom, incomplete go at the top
