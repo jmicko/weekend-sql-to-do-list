@@ -1,10 +1,5 @@
-(View Raw will give you the markdown that you can copy to your repos!)
-
-
-![MIT LICENSE](https://img.shields.io/github/license/scottbromander/the_marketplace.svg?style=flat-square)
-![REPO SIZE](https://img.shields.io/github/repo-size/scottbromander/the_marketplace.svg?style=flat-square)
-![TOP_LANGUAGE](https://img.shields.io/github/languages/top/scottbromander/the_marketplace.svg?style=flat-square)
-![FORKS](https://img.shields.io/github/forks/scottbromander/the_marketplace.svg?style=social)
+![REPO SIZE](https://img.shields.io/github/repo-size/jmicko/weekend-sql-to-do-list.svg?style=flat-square)
+![TOP_LANGUAGE](https://img.shields.io/github/languages/top/jmicko/weekend-sql-to-do-list.svg?style=flat-square)
 
 # PROJECT NAME
 Weekend SQL To-do List
@@ -22,8 +17,9 @@ _Duration: Weekend Project_
 Link to software that is required to install the app (e.g. node).
 
 - [Node.js](https://nodejs.org/en/)
-- [pg]
-- [jQuery]
+- [Postgresql](https://www.postgresql.org/)
+- [jQuery](https://jquery.com/)
+- [Express](https://expressjs.com/)
 
 ## Installation
 
@@ -45,7 +41,7 @@ Node JS
 Express
 Postgresql
 jQuery
-
+Pg
 
 ## Acknowledgement
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. (Thank your people)
